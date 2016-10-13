@@ -1,0 +1,24 @@
+{
+  "name": "react-progress-bar",
+  "version": "1.0.0",
+  "description": "<ProgressBar /> for React projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KarandikarMihir/react-progress-bar.git"
+  },
+  "keywords": [
+    "react",
+    "react-progress",
+    "react-progress-bar"
+  ],
+  "author": "Mihir Karandikar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KarandikarMihir/react-progress-bar/issues"
+  },
+  "homepage": "https://github.com/KarandikarMihir/react-progress-bar#readme"
+}
