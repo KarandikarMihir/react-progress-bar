@@ -6,7 +6,7 @@ node_js:
 script: npm run build
 
 install:
-  - npm i -g npm@5.5.0
+  - npm i -g npm@3.3.12
   - npm install
 
 before_install:
