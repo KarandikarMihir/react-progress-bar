@@ -4,6 +4,9 @@
   "description": "<ProgressBar /> for React projects",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --config webpack.config.js --colors",
+    "start": "webpack-dev-server --colors",
+    "lint": "eslint --ext js --ext jsx src || exit 0",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +23,22 @@
   "bugs": {
     "url": "https://github.com/KarandikarMihir/react-progress-bar/issues"
   },
-  "homepage": "https://github.com/KarandikarMihir/react-progress-bar#readme"
+  "homepage": "https://github.com/KarandikarMihir/react-progress-bar#readme",
+  "dependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "css-loader": "^0.25.0",
+    "file-loader": "^0.9.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
+  }
 }
