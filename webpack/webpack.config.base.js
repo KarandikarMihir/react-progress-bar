@@ -11,4 +11,13 @@ module.exports = {
   module: {
     loaders: loaders
   },
+  resolve: {
+    root: [path.resolve(process.cwd(), 'src'), path.resolve(process.cwd(), 'node_modules')],
+    extensions: [
+      '',
+      '.js',
+      '.jsx',
+      '.react.js',
+    ],
+  },
 };
