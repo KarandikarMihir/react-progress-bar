@@ -1,11 +1,13 @@
 import React from 'react';
 import { render } from 'react-dom';
+import ProgressBar from 'Components/ProgressBar';
 
-const App = () => {
-  return (
-    <div>Hello, React!</div>
-  );
-};
+const App = () => (
+  <div>
+    {'Hello, React + Webpack!'}
+    <ProgressBar />
+  </div>
+);
 
 const ROOT = document.getElementById('app');
 
