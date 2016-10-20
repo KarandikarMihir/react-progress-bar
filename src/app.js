@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 
 const App = () => {
   return (
-    <div>Hello, React!</div>
+    <div>Hello, React + Webpack!</div>
   );
 };
 

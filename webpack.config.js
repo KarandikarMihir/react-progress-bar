@@ -1,6 +1,6 @@
-const baseConfiguration = require('./webpack.config.base');
-const devConfiguration = require('./webpack.config.dev');
-const prodConfiguration = require('./webpack.config.prod');
+const baseConfiguration = require('./webpack/webpack.config.base');
+const devConfiguration = require('./webpack/webpack.config.dev');
+const prodConfiguration = require('./webpack/webpack.config.prod');
 
 const customConfiguration = process.env.NODE_ENV === 'production' ? prodConfiguration : devConfiguration;
 

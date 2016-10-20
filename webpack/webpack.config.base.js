@@ -10,5 +10,5 @@ module.exports = {
   },
   module: {
     loaders: loaders
-  },  
+  },
 };
