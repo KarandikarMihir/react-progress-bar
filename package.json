@@ -4,7 +4,7 @@
   "description": "<ProgressBar /> for React projects",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js --colors",
+    "build": "NODE_ENV='production' webpack --config webpack.config.js --colors",
     "start": "webpack-dev-server --colors",
     "lint": "eslint --ext js --ext jsx src || exit 0",
     "test": "echo \"Error: no test specified\" && exit 1"
