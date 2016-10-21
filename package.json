@@ -22,13 +22,13 @@
   "author": "Mihir Karandikar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/KarandikarMihir/react-progress-bar/issues"
+    "url": "https:/   /github.com/KarandikarMihir/react-progress-bar/issues"
   },
   "homepage": "https://github.com/KarandikarMihir/react-progress-bar#readme",
   "lint-staged": {
      "*.js": "lint"
    },
-   "pre-commit": "lint:staged",
+  "pre-commit": "lint:staged",
   "eslintConfig": {
     "parser": "babel-eslint",
     "extends": "airbnb",
@@ -133,8 +133,13 @@
     }
   },
   "lint-staged": {
+<<<<<<< HEAD
     "*.js": "lint:eslint",
     "*.css": "stylelint"
+=======
+      "*.js": "lint:eslint",
+      "*.css": "stylelint"
+>>>>>>> master
   },
   "dependencies": {
     "react": "^15.3.2",
@@ -158,7 +163,10 @@
     "file-loader": "^0.9.0",
     "html-loader": "^0.4.4",
     "html-webpack-plugin": "^2.22.0",
+<<<<<<< HEAD
     "json-loader": "^0.5.4",
+=======
+>>>>>>> master
     "lint-staged": "^3.2.0",
     "pre-commit": "^1.1.3",
     "style-loader": "^0.13.1",
