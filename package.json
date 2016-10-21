@@ -8,7 +8,6 @@
     "start": "webpack-dev-server --hot --colors",
     "lint": "eslint --ext js --ext jsx src || exit 0",
     "lint-staged": "lint-staged",
-    "lint:staged": "lint-staged",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,7 +25,7 @@
     "url": "https://github.com/KarandikarMihir/react-progress-bar/issues"
   },
   "homepage": "https://github.com/KarandikarMihir/react-progress-bar#readme",
-  "pre-commit": "lint:staged",
+  "pre-commit": "lint-staged",
   "eslintConfig": {
     "parser": "babel-eslint",
     "extends": "airbnb",
