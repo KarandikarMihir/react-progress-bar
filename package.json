@@ -26,10 +26,9 @@
   },
   "homepage": "https://github.com/KarandikarMihir/react-progress-bar#readme",
   "lint-staged": {
-     "*.js": "lint:eslint",
-     "*.css": "stylelint"
+     "*.js": "lint"
    },
-   "pre-commit": "lint-staged",
+   "pre-commit": "lint:staged",
   "eslintConfig": {
     "parser": "babel-eslint",
     "extends": "airbnb",
