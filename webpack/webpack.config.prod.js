@@ -28,7 +28,7 @@ module.exports = {
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
-        warnings: false, // ...but do not show warnings in the console (there is a lot of them)
+        warnings: false,
       },
     }),
   ],
