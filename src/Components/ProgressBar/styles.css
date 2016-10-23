@@ -1,3 +1,5 @@
-* {
-  font-family: monospace;
+.prefix {
+  padding: 20px;
+  background: #CCCCCC;
+  border-radius: 10px;
 }

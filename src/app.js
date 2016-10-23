@@ -4,7 +4,6 @@ import ProgressBar from 'Components/ProgressBar';
 
 const App = () => (
   <div>
-    {'Hello, React + Webpack!'}
     <ProgressBar />
   </div>
 );

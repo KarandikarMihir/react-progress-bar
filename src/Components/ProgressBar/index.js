@@ -1,8 +1,12 @@
 import React from 'react';
-import './styles.css';
+import styles from './styles.css';
 
-const ProgressBar = () => (
-  <div>{'<ProgressBar />'}</div>
-);
+class ProgressBar extends React.Component {
+  render() {
+    return (
+      <div className={styles.prefix}>{'Component: <ProgressBar />'}</div>
+    )
+  }
+}
 
 export default ProgressBar;
