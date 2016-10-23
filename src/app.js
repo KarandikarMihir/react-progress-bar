@@ -3,8 +3,13 @@ import { render } from 'react-dom';
 import ProgressBar from 'Components/ProgressBar';
 
 const App = () => (
-  <div>
-    <ProgressBar />
+  <div style={{ marginTop: 20 }}>
+    <ProgressBar
+      percent={50}
+      autoIncrement
+      intervalTime={200}
+      spinner={'right'}
+    />
   </div>
 );
 

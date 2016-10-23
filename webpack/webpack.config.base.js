@@ -11,18 +11,15 @@ module.exports = {
   output: {
     path: path.resolve(process.cwd(), 'build'),
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   module: {
     loaders: loaders,
     postcss: function () {
         return [
-          require('cssnext'),
-          require('postcss-smart-import'),
-          require('precss'),
           require('autoprefixer')
-        ]
-    }
+        ];
+    },
   },
   resolve: {
     root: [path.resolve(process.cwd(), 'src'), path.resolve(process.cwd(), 'node_modules')],
