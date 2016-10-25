@@ -1,5 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
+import styles from './styles.css';
 
 class ProgressBar extends React.Component {
   constructor(props) {
@@ -78,21 +79,18 @@ class ProgressBar extends React.Component {
     const { onTop, spinner } = this.props;
     let { className } = this.props;
     const { percent } = this.state;
-    className = classnames('react-progress-bar', className, {
-      'react-progress-bar-on-top': onTop,
-      'react-progress-bar-hide': percent < 0 || percent >= 100,
-    });
+    className = `${styles.progressBar} ${className} ${onTop ? styles.progressBarOnTop : ''} ${percent < 0 || percent >= 100 ? styles.progressBarHide : ''}`
     const style = { width: `${percent < 0 ? 0 : percent}%` };
-    const spinnerClassName = classnames('react-progress-bar-spinner', {
-      [`react-progress-bar-spinner-${spinner}`]: spinner,
+    const spinnerClassName = classnames(styles.progressBarSpinner, {
+      [`${styles.progressBarSpinner}${spinner}`] : spinner,
     });
     return (
       <div className={className}>
-        <div className="react-progress-bar-percent" style={style} />
+        <div className={styles.progressBarPercent} style={style} />
         {
           spinner ?
             <div className={spinnerClassName}>
-              <div className="react-progress-bar-spinner-icon" />
+              <div className={styles.progressBarSpinnerIcon} />
             </div>
             : null
         }

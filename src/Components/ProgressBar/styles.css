@@ -1,4 +1,4 @@
-@keyframes react-progress-spinner {
+@keyframes progressSpinner {
   0% {
     transform: rotate(0deg);
   }
@@ -7,7 +7,7 @@
   }
 }
 
-.react-progress-bar {
+.progressBar {
   position: fixed;
   top: 0;
   left: 0;
@@ -19,37 +19,37 @@
   &.react-progress-bar-on-top {
     height: 100%;
   }
-  &.react-progress-bar-hide {
+  &.progressBarHide {
     opacity: 0;
     visibility: hidden;
     z-index: -10;
   }
 }
 
-.react-progress-bar-percent {
+.progressBarPercent {
   height: 2px;
   background: #29D;
   box-shadow: 0 0 10px #29D, 0 0 5px #29D;
   transition: all 200ms ease;
 }
 
-.react-progress-bar-spinner {
+.progressBarSpinner {
   display: block;
   position: fixed;
   top: 15px;
 }
 
-.react-progress-bar-spinner-left {
+.progressBarSpinnerLeft {
   left: 15px;
   right: auto;
 }
 
-.react-progress-bar-spinner-right {
+.progressBarSpinnerRight {
   left: auto;
   right: 15px;
 }
 
-.react-progress-bar-spinner-icon {
+.progressBarSpinnerIcon {
   width: 18px;
   height: 18px;
   box-sizing: border-box;
@@ -57,5 +57,5 @@
   border-top-color: #29d;
   border-left-color: #29d;
   border-radius: 50%;
-  animation: react-progress-spinner 400ms linear infinite;
+  animation: progressSpinner 400ms linear infinite;
 }
