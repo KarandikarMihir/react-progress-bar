@@ -1,6 +1,5 @@
 const path = require('path');
 const loaders = require('./webpack.loaders');
-const cssnext = require('postcss-cssnext');
 
 module.exports = {
   entry: [
