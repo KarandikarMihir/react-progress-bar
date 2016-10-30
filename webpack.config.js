@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const camelCase = require('camelcase');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const pkg = require('./package.json');
 
