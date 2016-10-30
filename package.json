@@ -7,7 +7,6 @@
     "build": "gulp && NODE_ENV='production' webpack --config webpack.config.js --colors",
     "start": "webpack-dev-server --colors",
     "lint": "eslint --ext js --ext jsx src || exit 0",
-    "lint:staged": "lint-staged",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,9 +24,6 @@
     "url": "https:/   /github.com/KarandikarMihir/react-progress-bar/issues"
   },
   "homepage": "https://github.com/KarandikarMihir/react-progress-bar#readme",
-  "lint-staged": {
-    "*.js": "lint"
-  },
   "dependencies": {
     "react": "^15.3.2",
     "react-dom": "^15.3.2"
