@@ -1,5 +1,13 @@
 const path = require('path');
 const webpack = require('webpack');
+const camelCase = require('camelcase');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+const pkg = require('./package.json');
+
+const capitalizeFirstLetter = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+};
 
 module.exports = {
   entry: [
@@ -9,6 +17,16 @@ module.exports = {
     path: path.resolve(process.cwd(), 'build'),
     publicPath: '/',
     filename: 'bundle.js',
+    library: capitalizeFirstLetter(camelCase(pkg.name)),
+    libraryTarget: 'umd'
+  },
+  externals: {
+    react: {
+      root: 'React',
+      commonjs: 'react',
+      commonjs2: 'react',
+      amd: 'react'
+    },
   },
   module: {
     loaders: [
@@ -41,12 +59,19 @@ module.exports = {
         'NODE_ENV': JSON.stringify('production')
       }
     }),
+    new ExtractTextPlugin("[name].css", {
+      allChunks: true
+    }),
     new webpack.optimize.OccurrenceOrderPlugin(true),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
+      sourceMap: false,
       compress: {
-        warnings: false,
+        warnings: false
       },
+      output: {
+        comments: false
+      }
     }),
   ],
   resolve: {
