@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const camelCase = require('camelcase');
-
 const pkg = require('./package.json');
 
 const capitalizeFirstLetter = (string) => {
@@ -15,8 +14,8 @@ module.exports = {
   output: {
     path: path.resolve(process.cwd(), 'build'),
     publicPath: '/',
-    filename: 'bundle.js',
-    library: capitalizeFirstLetter(camelCase(pkg.name)),
+    filename: 'react-progress-bar.js',
+    library: 'react-progress-bar',
     libraryTarget: 'umd'
   },
   externals: {
