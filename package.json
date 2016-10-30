@@ -1,6 +1,6 @@
 {
   "name": "@karandikar.mihir/react-progress-bar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "<ProgressBar /> for React projects",
   "main": "build/react-progress-bar.js",
   "scripts": {
