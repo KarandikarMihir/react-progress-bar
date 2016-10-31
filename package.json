@@ -1,6 +1,6 @@
 {
   "name": "yet-another-react-progress",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "<ProgressBar /> for React projects",
   "main": "build/yet-another-react-progress.js",
   "scripts": {
@@ -34,7 +34,6 @@
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.16.0",
     "babel-preset-react": "^6.16.0",
-    "camelcase": "^3.0.0",
     "css-loader": "^0.25.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.13",
