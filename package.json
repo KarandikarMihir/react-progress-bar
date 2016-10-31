@@ -1,6 +1,6 @@
 {
   "name": "yet-another-react-progress",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "<ProgressBar /> for React projects",
   "main": "build/yet-another-react-progress.js",
   "scripts": {
