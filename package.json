@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/KarandikarMihir/yet-another-react-progress#readme",
   "dependencies": {
-    "react": "^15.3.2"
+    "react": ">=15.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.17.0",
