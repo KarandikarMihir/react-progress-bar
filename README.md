@@ -1,6 +1,6 @@
 #React Progress Bar :hourglass:
 
-![Travis CI](https://travis-ci.org/KarandikarMihir/yet-another-react-progress.svg?branch=master "Logo Title Text 1")
+[![Build Status](https://travis-ci.org/KarandikarMihir/yet-another-react-progress.svg?branch=master)](https://travis-ci.org/KarandikarMihir/yet-another-react-progress)
 ![Dependency](https://david-dm.org/KarandikarMihir/yet-another-react-progress.svg)
 [![npm version](https://badge.fury.io/js/yet-another-react-progress.svg)](https://badge.fury.io/js/yet-another-react-progress)
 ___
