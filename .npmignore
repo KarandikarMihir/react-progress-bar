@@ -1,3 +1,7 @@
+# Source code
+src
+/*.js
+
 # Logs
 logs
 *.log
