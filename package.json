@@ -2,7 +2,7 @@
   "name": "yet-another-react-progress",
   "version": "1.0.0",
   "description": "<ProgressBar /> for React projects",
-  "main": "build/react-progress-bar.js",
+  "main": "build/yet-another-react-progress.js",
   "scripts": {
     "build": "npm run clean && gulp && NODE_ENV='production' webpack --config webpack.config.js --colors",
     "start": "webpack-dev-server --colors",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KarandikarMihir/react-progress-bar.git"
+    "url": "git+https://github.com/KarandikarMihir/yet-another-react-progress.git"
   },
   "keywords": [
     "react",
@@ -22,9 +22,9 @@
   "author": "Mihir Karandikar",
   "license": "MIT",
   "bugs": {
-    "url": "https:/   /github.com/KarandikarMihir/react-progress-bar/issues"
+    "url": "https:/   /github.com/KarandikarMihir/yet-another-react-progress/issues"
   },
-  "homepage": "https://github.com/KarandikarMihir/react-progress-bar#readme",
+  "homepage": "https://github.com/KarandikarMihir/yet-another-react-progress#readme",
   "dependencies": {
     "react": "^15.3.2"
   },
