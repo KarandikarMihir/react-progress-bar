@@ -1,6 +1,6 @@
 {
   "name": "yet-another-react-progress",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "<ProgressBar /> for React projects",
   "main": "build/yet-another-react-progress.js",
   "scripts": {
@@ -40,5 +40,8 @@
     "rimraf": "^2.5.4",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2"
+  },
+  "dependencies": {
+    "styled-components": "^1.1.0"
   }
 }

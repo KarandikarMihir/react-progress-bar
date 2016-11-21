@@ -1,22 +1,29 @@
-import React from 'react';
+/**
+ *
+ * ProgressBar
+ *
+*/
+
+import React, { PropTypes } from 'react';
+import { ProgressBarWrapper, ProgressBarPercent } from './styles';
 
 class ProgressBar extends React.Component {
+
   constructor(props) {
     super(props);
-    this.defaultProps = {
-      percent: -1,
-      onTop: false,
-      autoIncrement: false,
-      intervalTime: 200,
-      spinner: 'left',
-    };
+    
+    this.handleProps = this.handleProps.bind(this);
+    this.increment = this.increment.bind(this);
 
     this.state = {
-      percent: this.props.percent,
+      percent: props.percent,
     };
 
-    this.increment = this.increment.bind(this);
-    this.handleProps = this.handleProps.bind(this);
+    this.defaultProps = {
+      percent: -1,
+      autoIncrement: true,
+      intervalTime: 200,
+    };
   }
 
   componentDidMount() {
@@ -25,36 +32,58 @@ class ProgressBar extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (this.interval) {
+      // stop progress when new props come in
       clearInterval(this.interval);
+      this.interval = undefined;
     }
     if (this.timeout) {
+      // clear timeout when new props come in
       clearTimeout(this.timeout);
+      this.timeout = undefined;
     }
+    // start progress with updated props
     this.handleProps(nextProps);
   }
 
   componentWillUnmount() {
+    // cleaning up interval and timeout
     if (this.interval) {
       clearInterval(this.interval);
+      this.interval = undefined;
     }
     if (this.timeout) {
       clearTimeout(this.timeout);
+      this.timeout = undefined;
     }
   }
 
   increment() {
+    /**
+     * Increment the percent randomly.
+     * Only used when autoIncrement is set to true
+    */
     let { percent } = this.state;
     percent += ((Math.random() + 1) - Math.random());
-    percent = (percent < 99) ? percent : 99;
+    percent = percent < 99 ? percent : 99;
     this.setState({
       percent,
     });
   }
 
   handleProps(props) {
+    /**
+     * Increment progress bar if auto increment is set to true
+     * and progress percent is less than 99.
+    */
     if (props.autoIncrement && props.percent >= 0 && props.percent < 99) {
       this.interval = setInterval(this.increment, props.intervalTime);
     }
+
+    /**
+     * Reset the progress bar when percent hits 100
+     * For better visual effects, percent is set to 99.9
+     * and then cleared in the callback after some time.
+    */
 
     if (props.percent >= 100) {
       this.setState({
@@ -74,36 +103,24 @@ class ProgressBar extends React.Component {
   }
 
   render() {
-    const { onTop, spinner } = this.props;
-    let { className } = this.props;
     const { percent } = this.state;
-    className = `progressBar
-      ${className}
-      ${onTop ? 'progressBarOnTop' : ''}
-      ${percent < 0 || percent >= 100 ? 'progressBarHide' : ''}`;
 
-    const style = { width: `${percent < 0 ? 0 : percent}%` };
-    const spinnerClassName = `progressBarSpinner ${spinner ? 'progressBarSpinner' + 'spinner' : ''}`
+    // Hide progress bar if percent is less than 0.
+    const isHidden = percent < 0 || percent >= 100;
+
+    // Set `state.percent` as width.
+    const style = { width: `${(percent <= 0 ? 100 : percent)}%` };
+
     return (
-      <div className={className}>
-        <div className={'progressBarPercent'} style={style} />
-        {
-          spinner ?
-            <div className={spinnerClassName}>
-              <div className={'progressBarSpinnerIcon'} />
-            </div>
-            : null
-        }
-      </div>
+      <ProgressBarWrapper hidden={isHidden}>
+        <ProgressBarPercent style={style} />
+      </ProgressBarWrapper>
     );
   }
 }
 
 ProgressBar.propTypes = {
-  className: React.PropTypes.string,
-  percent: React.PropTypes.number.isRequired,
-  onTop: React.PropTypes.bool,
-  spinner: React.PropTypes.oneOf([false, 'left', 'right']),
+  percent: PropTypes.number.isRequired,
 };
 
 export default ProgressBar;
